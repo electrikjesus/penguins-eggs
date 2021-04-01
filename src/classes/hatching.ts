@@ -5,10 +5,12 @@
  * mail: piero.proietti@gmail.com
  *
  */
+ import React from ('react')
+ import {render} from ('ink')
+
+
 import os = require('os')
 import inquirer = require('inquirer')
-//import drivelist = require('drivelist')
-
 import fs = require('fs')
 import chalk = require('chalk')
 import shx = require('shelljs')
@@ -90,6 +92,9 @@ export default class Hatching {
     */
    async install(verbose = false, umount = false) {
       Utils.titles(`hatching`)
+
+      
+
       console.log()
       Utils.warning(`The process of installation is running...`)
       if (fs.existsSync('/sys/firmware/efi/efivars')) {
