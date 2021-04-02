@@ -36,4 +36,7 @@ pids
 pb.yaml
 perrisbrewery/workdir/*
 !perrisbrewery/workdir/.gitkeep
+manpages/doc/man/eggs.1.gz
+pb.yaml
+
 
