@@ -1,8 +1,0 @@
-path: /home/artisan/penguins-eggs/dist/deb/
-name: eggs
-sourceVersion: 7.8.43
-buildVersion: '1'
-linuxArch: armel
-tempDir: ./perrisbrewery/workdir/eggs_7.8.43-1_armel
-nodeVersion: v14.16.0
-destDir: ./perrisbrewery/workdir/eggs_7.8.43-1_armel
