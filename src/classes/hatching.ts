@@ -5,11 +5,7 @@
  * mail: piero.proietti@gmail.com
  *
  */
- import React from ('react')
- import {render} from ('ink')
-
-
-import os = require('os')
+ import os = require('os')
 import inquirer = require('inquirer')
 import fs = require('fs')
 import chalk = require('chalk')
