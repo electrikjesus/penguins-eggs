@@ -1,11 +1,11 @@
 {
   "name": "penguins-eggs",
-  "version": "7.8.43",
+  "version": "7.8.44",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
-      "version": "7.8.43",
+      "version": "7.8.44",
       "license": "MIT",
       "dependencies": {
         "@getvim/execute": "^1.0.0",
