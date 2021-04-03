@@ -19,7 +19,7 @@
 
     PLEASE NOTE:
     This is not the original neon theme, but an adpment made for eggs 
-    from Piero Proietti <piero.proietti@gmail.com> 
+    from eggs author: Piero Proietti <piero.proietti@gmail.com> 
 */
 
 
@@ -55,8 +55,8 @@ Presentation
         }
          Text {
             font.family: "Helvetica"
-            font.pixelSize : 22
-            color:#fcfcfc;
+            font.pixelSize : 20
+            color: "#fcfcfc"
             anchors.horizontalCenter: slide1.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>One Blue Marble - a community of creators around the globe</h2>")
@@ -76,8 +76,8 @@ Presentation
         }
          Text {
             font.family: "Helvetica"
-            font.pixelSize : 22
-            color:#fcfcfc;
+            font.pixelSize : 20
+            color: "#fcfcfc"
             anchors.horizontalCenter: slide2.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>KDE neon - the latest and greatest from the KDE community</h2>")
@@ -98,8 +98,8 @@ Presentation
         }
          Text {
             font.family: "Helvetica"
-            font.pixelSize : 22
-            color:#fcfcfc;
+            font.pixelSize : 20
+            color: "#fcfcfc"
             anchors.horizontalCenter: slide3.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>Plasma Desktop, simple by default and powerful when needed</h2>")
@@ -120,8 +120,8 @@ Presentation
         }
          Text {
             font.family: "Helvetica"
-            font.pixelSize : 22
-            color:#fcfcfc;
+            font.pixelSize : 20
+            color: "#fcfcfc"
             anchors.horizontalCenter: slide3.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>Security, privacy and autonomy with KDE, Plasma and Neon</h2>")

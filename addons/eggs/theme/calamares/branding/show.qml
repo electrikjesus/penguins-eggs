@@ -42,8 +42,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide1
-            source: "slide1.png"
+            id: reproductive-system
+            source: "1-reproductive-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -56,7 +56,7 @@ Presentation
             anchors.horizontalCenter: slide1.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><h2>The reproductive system for penguins!</h2>"+
+                  "<br/><h2>eggs - the reproductive system for penguins!</h2>"+
                   "<br/><h3>https://penguins-eggs.net</h3>")
             wrapMode: Text.WordWrap
             width: presentation.widt
@@ -65,8 +65,8 @@ Presentation
     }
     Slide {
         Image {
-            id: slide2
-            source: "slide2.png"
+            id: start-reproduction
+            source: "2-start-reproduction.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -89,8 +89,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide3
-            source: "slide3.png"
+            id: its-your-system
+            source: "3-its-your-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -103,7 +103,7 @@ Presentation
             anchors.horizontalCenter: slide3.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><p>With penguin's eggs you can bring your system with you and use or install elsewhere.</p>")
+                  "<br/><p>It's your system! Bring it with you and use/install it elsewhere.</p>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -112,8 +112,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide4
-            source: "slide9.png"
+            id: eggs-presentation
+            source: "4-eggs-presentation.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -135,8 +135,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide5
-            source: "slide5.png"
+            id: wait-hatching
+            source: "5-wait-hatching.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -158,8 +158,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide6
-            source: "slide6.png"
+            id: follow-penguins
+            source: "6-follow-penguins.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810; height: 485
@@ -186,8 +186,8 @@ Presentation
 
     Slide {
         Image {
-            id: slide7
-            source: "slide7.png"
+            id: created-by
+            source: "7-created-by.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
             width: 810
