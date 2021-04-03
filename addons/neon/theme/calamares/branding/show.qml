@@ -57,7 +57,7 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 20
             color: "#fcfcfc"
-            anchors.horizontalCenter: slide1.horizontalCenter
+            anchors.horizontalCenter: kde.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>One Blue Marble - a community of creators around the globe</h2>")
             wrapMode: Text.WordWrap
@@ -78,7 +78,7 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 20
             color: "#fcfcfc"
-            anchors.horizontalCenter: slide2.horizontalCenter
+            anchors.horizontalCenter: neon.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>KDE neon - the latest and greatest from the KDE community</h2>")
             wrapMode: Text.WordWrap
@@ -100,7 +100,7 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 20
             color: "#fcfcfc"
-            anchors.horizontalCenter: slide3.horizontalCenter
+            anchors.horizontalCenter: plasma.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>Plasma Desktop, simple by default and powerful when needed</h2>")
             wrapMode: Text.WordWrap
@@ -122,7 +122,7 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 20
             color: "#fcfcfc"
-            anchors.horizontalCenter: slide3.horizontalCenter
+            anchors.horizontalCenter: secure.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>Security, privacy and autonomy with KDE, Plasma and Neon</h2>")
             wrapMode: Text.WordWrap
