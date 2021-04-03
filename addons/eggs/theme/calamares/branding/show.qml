@@ -46,7 +46,8 @@ Presentation
             source: "1-reproductive-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -59,7 +60,7 @@ Presentation
                   "<h2>The reproductive system for penguins!</h2>"+
                   "<h3>https://penguins-eggs.net</h3>")
             wrapMode: Text.WordWrap
-            width: presentation.widt
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -69,7 +70,8 @@ Presentation
             source: "2-start-reproduction.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -82,7 +84,7 @@ Presentation
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
                   "<h2>Start the reproduction of your system! Produce yours eggs and simply install them on another computer. You can do it!</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -93,7 +95,8 @@ Presentation
             source: "3-its-your-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -103,9 +106,9 @@ Presentation
             anchors.horizontalCenter: itsYourSystem.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<h2>It's your system! Bring it with you and use/install it elsewhere.</h2>")
+                  "<h2>It's your system!<br/>Bring it with you and use/install it elsewhere.</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -116,7 +119,8 @@ Presentation
             source: "4-eggs-presentation.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -126,9 +130,9 @@ Presentation
             anchors.horizontalCenter: eggsPresentation.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<h2>Eggs is a terminal tool, but it's simple and nice. Write eggs without else and get the commands list</h2>")
+                  "<h2>Eggs is a terminal tool,<br/>but it's simple and nice. Write eggs without else and get the commands list</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -139,7 +143,8 @@ Presentation
             source: "5-wait-hatching.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -151,7 +156,7 @@ Presentation
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
                   "<h2>Please wait, we are hatching...<br/>Don't disturb the process, in few time You will have a new penguin.</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -162,7 +167,8 @@ Presentation
             source: "6-follow-penguins.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -177,7 +183,7 @@ Presentation
                   "<h3>Use this tool, enjoy and if you can collaborate.</h3>"+
                   "<br><h2>That's all peoples!</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -203,7 +209,7 @@ Presentation
                   "<h4>issues: htts://github.com/pieroproietti/penguins-eggs</h4>"+
                   "<h3>email: piero.proietti@gmail.com</h3>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }

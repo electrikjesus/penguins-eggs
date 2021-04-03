@@ -44,13 +44,14 @@ Presentation
         onTriggered: nextSlide()
     }
 
-        Slide {
+    Slide {
         Image {
             id: kde
             source: "kde.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -61,7 +62,7 @@ Presentation
             anchors.top: background.top
             text: qsTr("<h2>One Blue Marble - a community of creators around the globe</h2>")
             wrapMode: Text.WordWrap
-            width: presentation.widt
+            width: kde.width
             horizontalAlignment: Text.Center
         }
     }
@@ -71,7 +72,8 @@ Presentation
             source: "neon.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -82,7 +84,7 @@ Presentation
             anchors.top: background.top
             text: qsTr("<h2>KDE neon - the latest and greatest from the KDE community</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: neon.width
             horizontalAlignment: Text.Center
         }
     }
@@ -93,18 +95,19 @@ Presentation
             source: "plasma.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
             font.family: "Helvetica"
             font.pixelSize : 20
-            color: "#fcfcfc"
+            color: "#aa3333"
             anchors.horizontalCenter: plasma.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h2>Plasma Desktop, simple by default and powerful when needed</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: plasma.width
             horizontalAlignment: Text.Center
         }
     }
@@ -115,7 +118,8 @@ Presentation
             source: "secure.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
-            width: 810; height: 485
+            width: 810
+            height: 485
             fillMode: Image.PreserveAspectFit
         }
          Text {
@@ -126,7 +130,7 @@ Presentation
             anchors.top: background.top
             text: qsTr("<h2>Security, privacy and autonomy with KDE, Plasma and Neon</h2>")
             wrapMode: Text.WordWrap
-            width: 600
+            width: secure.width
             horizontalAlignment: Text.Center
         }
     }
