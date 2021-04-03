@@ -42,7 +42,7 @@ Presentation
 
     Slide {
         Image {
-            id: reproductive-system
+            id: reproductiveSystem
             source: "1-reproductive-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -65,7 +65,7 @@ Presentation
     }
     Slide {
         Image {
-            id: start-reproduction
+            id: startReproduction
             source: "2-start-reproduction.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -89,7 +89,7 @@ Presentation
 
     Slide {
         Image {
-            id: its-your-system
+            id: itsYourSystem
             source: "3-its-your-system.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -112,7 +112,7 @@ Presentation
 
     Slide {
         Image {
-            id: eggs-presentation
+            id: eggsPresentation
             source: "4-eggs-presentation.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -135,7 +135,7 @@ Presentation
 
     Slide {
         Image {
-            id: wait-hatching
+            id: waitHatching
             source: "5-wait-hatching.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -158,7 +158,7 @@ Presentation
 
     Slide {
         Image {
-            id: follow-penguins
+            id: followPenguins
             source: "6-follow-penguins.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
@@ -186,7 +186,7 @@ Presentation
 
     Slide {
         Image {
-            id: created-by
+            id: createdBy
             source: "7-created-by.png"
             anchors.centerIn: parent
             anchors.top: background.bottom
