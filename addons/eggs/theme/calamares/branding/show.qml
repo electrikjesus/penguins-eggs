@@ -55,9 +55,9 @@ Presentation
             color: "#aa3333"
             anchors.horizontalCenter: slide1.horizontalCenter
             anchors.top: background.top
-            text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><h2>eggs - the reproductive system for penguins!</h2>"+
-                  "<br/><h3>https://penguins-eggs.net</h3>")
+            text: qsTr("<h1>Penguin's eggs</h1>"+
+                  "<h2>The reproductive system for penguins!</h2>"+
+                  "<h3>https://penguins-eggs.net</h3>")
             wrapMode: Text.WordWrap
             width: presentation.widt
             horizontalAlignment: Text.Center
@@ -173,10 +173,9 @@ Presentation
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
                   "<br/>"+
-                  "<br/>"+
-                  "<br/><p>Follow the penguin's eggs development, can be funny.</p>" +
-                  "<p>Penguin's eggs and it's developer need help, " +
-                  "use this tool, enjoy and if you can collaborate.</p>"+
+                  "<br/><p>Follow penguin's eggs development, can be funny.</p>" +
+                  "<p>Developers, graphics and testers need feedback and help.</p>" +
+                  "Use this tool, enjoy and if you can collaborate.</p>"+
                   "<br/>That's all peoples!")
             wrapMode: Text.WordWrap
             width: 600

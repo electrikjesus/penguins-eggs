@@ -18,6 +18,9 @@ You can follow the project also consulting the [commit history](https://github.c
 ## Changelog
 Versions are listed on reverse order, the first is the last one.
 
+### eggs-7.8.44
+* added theme neon, revisited theme eggs
+
 ### eggs-7.8.43
 * select between zstd/lz4/gzip for fast compression. In produce we have --release in place of --final (add max compression and sterilize)
 
