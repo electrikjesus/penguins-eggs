@@ -53,9 +53,9 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 22
             color: "#aa3333"
-            anchors.horizontalCenter: slide1.horizontalCenter
+            anchors.horizontalCenter: reproductiveSystem.horizontalCenter
             anchors.top: background.top
-            text: qsTr("<h1>Penguin's eggs</h1>"+
+            text: qsTr("<h1>Penguin's eggs</h1><br/>"+
                   "<h2>The reproductive system for penguins!</h2>"+
                   "<h3>https://penguins-eggs.net</h3>")
             wrapMode: Text.WordWrap
@@ -77,10 +77,10 @@ Presentation
             font.pixelSize : 22
             // color: "#002439"
             color: "#aa3333"
-            anchors.horizontalCenter: slide2.horizontalCenter
+            anchors.horizontalCenter: startReproduction.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><p>Start the reproduction of your system! Produce yours eggs and simply install them on another computer. You can do it!</p>")
+                  "<h2>Start the reproduction of your system! Produce yours eggs and simply install them on another computer. You can do it!</h2>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -100,10 +100,10 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 22
             color: "#aa3333"
-            anchors.horizontalCenter: slide3.horizontalCenter
+            anchors.horizontalCenter: itsYourSystem.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><p>It's your system! Bring it with you and use/install it elsewhere.</p>")
+                  "<h2>It's your system! Bring it with you and use/install it elsewhere.</h2>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -123,10 +123,10 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 22
             color: "#aa3333"
-            anchors.horizontalCenter: slide4.horizontalCenter
+            anchors.horizontalCenter: eggsPresentation.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><p>Eggs is a terminal tool, but it's simple and nice. Write eggs without else and get the commands list</p></br>")
+                  "<h2>Eggs is a terminal tool, but it's simple and nice. Write eggs without else and get the commands list</h2>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -146,10 +146,10 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 22
             color: "#aa3333"
-            anchors.horizontalCenter: slide5.horizontalCenter
+            anchors.horizontalCenter: waitHatching.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/><p>Please wait, we are hatching the egg... <br/><br/>Don't disturb the process, in few time You will have a new penguin.</p>")
+                  "<h2>Please wait, we are hatching...<br/>Don't disturb the process, in few time You will have a new penguin.</h2>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -172,11 +172,10 @@ Presentation
             anchors.horizontalCenter: slide6.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
-                  "<br/>"+
-                  "<br/><p>Follow penguin's eggs development, can be funny.</p>" +
-                  "<p>Developers, graphics and testers need feedback and help.</p>" +
-                  "Use this tool, enjoy and if you can collaborate.</p>"+
-                  "<br/>That's all peoples!")
+                  "<h3>Follow penguin's eggs development, can be funny.</h3>" +
+                  "<h3>Developers, graphics and testers need feedback and help.</h3>" +
+                  "<h3>Use this tool, enjoy and if you can collaborate.</h3>"+
+                  "<br><h2>That's all peoples!</h2>")
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -197,11 +196,11 @@ Presentation
             font.family: "Helvetica"
             font.pixelSize : 22
             color: "#aa3333"
-            anchors.horizontalCenter: slide7.horizontalCenter
+            anchors.horizontalCenter: followPenguins.horizontalCenter
             anchors.top: background.top
             text: qsTr("<h1>Penguin's eggs</h1><br/>"+
                   "<h2>Created by Piero Proietti</h2><br/>"+
-                  "<h3>issues: htts://github.com/pieroproietti/penguins-eggs</h3>"+
+                  "<h4>issues: htts://github.com/pieroproietti/penguins-eggs</h4>"+
                   "<h3>email: piero.proietti@gmail.com</h3>")
             wrapMode: Text.WordWrap
             width: 600
