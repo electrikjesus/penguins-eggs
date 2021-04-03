@@ -14,13 +14,15 @@ import Pacman from './pacman'
 import { execSync } from 'child_process'
 import Bleach from './bleach'
 
+const exec = require('../lib/utils').exec
+
 /**
  * 
  */
 export default class Yolk {
 
     dir = '/usr/local/yolk'
-    
+
     /**
      * 
      * @param verbose 
@@ -37,7 +39,12 @@ export default class Yolk {
             process.exit(0)
         }
 
-        execSync('apt-get update --yes')
+        const echo = Utils.setEcho(verbose)
+        try {
+            await exec('apt-get update --yes', echo)
+        } catch (e) {
+            Utils.error('Yolk.create() apt-get update --yes ' + e.error)
+        }
         if (!this.exists()) {
             shx.exec(`mkdir ${this.dir} -p`)
         } else {
@@ -121,6 +128,6 @@ export default class Yolk {
             await execute(cmd)
         }
     }
-    
+
 
 }
