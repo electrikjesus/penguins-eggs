@@ -5,7 +5,20 @@
  * mail: piero.proietti@gmail.com
  *
  */
- import os = require('os')
+
+/**
+ * steps (from calamares)
+ * welcome + select language
+ * location + timezone (continent + town)
+ * keyboard + model + layout
+ * partition 
+ * users userfullnam, username, hostname, password, userPasswordConfirm, samePassword, rootPassword, rootPasswordConfirm
+ * summary Location, system language, numbers and dates. Keyboard model and layaut. Partitions current, after, informations
+ * install creating Partition, unpacking image,
+ * finish
+ */
+
+import os = require('os')
 import inquirer = require('inquirer')
 import fs = require('fs')
 import chalk = require('chalk')
@@ -86,10 +99,8 @@ export default class Hatching {
     * @param umount 
     * @returns 
     */
-   async install(verbose = false, umount = false) {
+   async install(verbose = false) {
       Utils.titles(`hatching`)
-
-      
 
       console.log()
       Utils.warning(`The process of installation is running...`)
@@ -98,18 +109,6 @@ export default class Hatching {
       }
 
       Utils.warning('getting disk size' + this.disk.installationDevice + ': ' + await this.getDiskSize(this.disk.installationDevice, verbose))
-      if (umount) {
-         try {
-            await this.umountVFS(verbose)
-         } catch (error) {
-            console.log(`umountVFS: ${error}`)
-         }
-         try {
-            await this.umount4target(verbose)
-         } catch (error) {
-            console.log(`umount4target: ${error}`)
-         }
-      }
 
       const isDiskPrepared: boolean = await this.diskPartition(this.disk.installationDevice, this.disk.partionType, verbose)
       if (isDiskPrepared) {
@@ -143,11 +142,11 @@ export default class Hatching {
             console.log(`fstab: ${error}`)
          }
 
-         // try {
-         // await this.hostname(verbose)
-         // } catch (error) {
-         //console.log(`hostname: ${error}`)
-         // }
+         try {
+            await this.hostname(verbose)
+         } catch (error) {
+            console.log(`hostname: ${error}`)
+         }
 
          try {
             await this.resolvConf(verbose)
@@ -166,7 +165,6 @@ export default class Hatching {
          } catch (error) {
             console.log(`hostname: ${error}`)
          }
-
 
          try {
             await this.hosts(verbose)
@@ -228,6 +226,12 @@ export default class Hatching {
             await this.removeInstaller(verbose)
          } catch (error) {
             console.log(`removeInstaller: ${error}`)
+         }
+
+         try {
+            await this.updateInitramfs(verbose)
+         } catch (error) {
+            console.log(`updateInitramfs: ${error}`)
          }
 
          try {
@@ -903,23 +907,6 @@ adduser ${name} \
    }
 
    /**
-    * Rimuove il lvm pve
-    * @param verbose
-    */
-   async lvmRemove(verbose = false) {
-      const echo = Utils.setEcho(verbose)
-      if (verbose) {
-         Utils.warning('hatching: diskPartition')
-      }
-      await exec('lvremove /dev/pve/swap', echo)
-      await exec('lvremove /dev/pve/data', echo)
-      await exec('lvremove /dev/pve/root', echo)
-      await exec('vgremove /dev/pve', echo)
-      await exec('pvremove /dev/sda2', echo)
-      await exec('rm /TARGET -rf', echo)
-   }
-
-   /**
     *
     * @param device
     */
@@ -999,7 +986,7 @@ adduser ${name} \
 
       const msg1 = '\nThe process of installation will format your disk and destroy all datas on it.\n Did You are sure?\n'
       const msg2 = '\nWe need to be absolutely sure, did You saved your data before to proced?\n'
-      const msg3 = '\nConfirm, again you want to continue?\n'
+      const msg3 = '\nConfirm again. You want to continue?\n'
 
       if (await Utils.customConfirm(msg1)) {
          if (await Utils.customConfirm(msg2)) {
@@ -1365,5 +1352,3 @@ function title(message: string) {
    Utils.titles(`Installation`)
    Utils.warning(message)
 }
-
-

@@ -84,12 +84,15 @@ export default class Xdg {
     */
    static async autologin(olduser: string, newuser: string, chroot = '/') {
       if (await Pacman.isGui()) {
+
+         // slim
          if (Pacman.packageIsInstalled('slim')) {
             shx.sed('-i', `auto_login no`, `auto_login yes`, `${chroot}/etc/slim.conf`)
             shx.sed('-i', `default_user ${olduser}`, `default_user ${newuser}`, `${chroot}/etc/slim`)
          }
+
+         // lightdm
          if (Pacman.packageIsInstalled('lightdm')) {
-            // Lightdm
             shx.sed('-i', `autologin-user=${olduser}`, `autologin-user=${newuser}`, `${chroot}/etc/lightdm/lightdm.conf`)
          }
 
@@ -110,17 +113,9 @@ export default class Xdg {
             }
          }
 
-         // slim
-         if (Pacman.packageIsInstalled('slim')) {
-            shx.sed('-i', `autologin no`, `autologin yes`, `${chroot}/etc/slim.conf`)
-            shx.sed('-i', `default_user ${olduser}`, `default_user ${newuser}`, `${chroot}/etc/slim.conf`)
-         }
 
          // gdm3
          if (Pacman.packageIsInstalled('gdm3')) {
-            // [daemon]
-            // AutomaticLoginEnable=True
-            // AutomaticLogin=live
             shx.sed('-i', `AutomaticLoginEnable=False`, `AutomaticLoginEnable=True`, `${chroot}/etc/gdm3/custom.conf`)
             shx.sed('-i', `AutomaticLogin=${olduser}`, `AutomaticLogin=artisan=${newuser}`, `${chroot}/etc/gdm3/custom.conf`)
          }

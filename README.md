@@ -95,7 +95,7 @@ $ npm install -g penguins-eggs
 $ eggs COMMAND
 running command...
 $ eggs (-v|--version|version)
-penguins-eggs/7.8.44 linux-x64 node-v15.13.0
+penguins-eggs/7.8.44 linux-x64 node-v14.16.0
 $ eggs --help [COMMAND]
 USAGE
   $ eggs COMMAND
@@ -328,12 +328,9 @@ USAGE
   $ eggs install
 
 OPTIONS
-  -c, --cli        force use eggs CLI installer
-  -h, --help       show CLI help
-  -l, --lvmremove  remove lvm /dev/pve
-  -m, --mx         try to use GUI MX installer
-  -u, --umount     umount devices
-  -v, --verbose    verbose
+  -c, --cli      force use eggs CLI installer
+  -h, --help     show CLI help
+  -v, --verbose  verbose
 
 ALIASES
   $ eggs hatch
