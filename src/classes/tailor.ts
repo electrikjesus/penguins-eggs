@@ -47,13 +47,31 @@ export default class Tailor {
         } else {
             console.log('costume ' + chalk.cyan(this.costume) + ' not found in gardrobe: ' + chalk.green(this.gardrobe))
         }
-
+        
+        /**
+         * Dependencies:
+         * apt-get install packages
+         */
+        if (this.materials.sequence.dependencies[0] !== null) {
+            step = `installing dependencies`
+            Utils.warning(step)
+            let cmd = 'apt-get install -y '
+            this.materials.sequence.packages.forEach(elem => {
+                cmd += ` ${elem}`
+            })
+            if (await Utils.customConfirm(cmd)) {
+                if (!this.verbose) {
+                    console.log('wait for: ' + step)
+                }
+                await exec(cmd, this.echo)
+            }
+        }
 
         /**
          * Repositories
          */
         Utils.warning(`analyzing repositories`)
-
+        
         /**
         * sources.list
         */
@@ -160,6 +178,46 @@ export default class Tailor {
             }
             await exec(`dpkg -i ${this.gardrobe}\*.deb`)
         }
+        
+        /**
+         * Customizations.scripts:
+         * execute script
+         */
+        if (this.materials.sequence.customizations.scripts[0] !== null) {
+            step = `adding customizations`
+            Utils.warning(step)
+            this.materials.sequence.customizations.scripts.forEach(async cmd => {
+                try {
+                    await exec(cmd, this.echo)
+                } catch (error) {
+                    await Utils.pressKeyToExit(JSON.stringify(error))
+                }
+            })
+        }
+        
+        /**
+         * Customizations.skel:
+         * copy extra files to /etc/skel/
+         */
+        if (this.materials.sequence.customizations.skel) {
+            step = `adding skel customizations`
+            Utils.warning(step)
+            /* copy from ${this.gardrobe}/${this.costume}/skel/* to /home/ + this.settings.config.user_opt 
+             * await exec(`cp -R ${this.gardrobe}/${this.costume}/skel/* /home/ + this.settings.config.user_opt`)
+             */
+        }
+        
+        /**
+         * Customizations.usr:
+         * copy extra files to /usr/
+         */
+        if (this.materials.sequence.customizations.usr) {
+            step = `adding usr customizations`
+            Utils.warning(step)
+            /* copy from ${this.gardrobe}/${this.costume}/usr/* to /usr/
+             * await exec(`cp -R ${this.gardrobe}/${this.costume}/usr/* /usr/`)
+             */
+        }      
 
         /**
          * hostname and hosts

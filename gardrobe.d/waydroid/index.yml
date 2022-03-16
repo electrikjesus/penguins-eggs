@@ -19,10 +19,14 @@ description: 'minimun waydroid installation'
 author: Jon West
 release: 0.0.1
 distroId: Debian
-codenameId: booksworm
+codenameId: bookworm
 releaseId: unstable
 applyTo: naked
 sequence:
+  dependencies:
+    - iptables
+    - lxc
+    - curl
   repositories:
     sourcesList:
       main: true
@@ -40,6 +44,11 @@ sequence:
   accessories:
     - null
   debs: false
+  customizations:
+    scripts:
+    - wget -O - https://raw.githubusercontent.com/axel358/Waydroid-Settings/main/install.sh | bash
+    skel: true
+    usr: true
   hostname: true
   reboot: true
 ...
